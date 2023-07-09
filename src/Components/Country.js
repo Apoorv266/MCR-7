@@ -1,8 +1,8 @@
 import React, { useContext } from 'react'
-import { useParams } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 import { contextData } from '../Context/ContextWrapper'
 import RenderCard from './RenderCard'
-import CountryRender from './CountryRender'
+
 
 const Country = () => {
     const { continent, continentId } = useParams()
@@ -12,10 +12,18 @@ const Country = () => {
 
     return (
         <div>
-            <img src="https://img.uxwing.com/wp-content/themes/uxwing/download/computers-mobile-hardware/back-button-icon.png" alt="" srcset="" width={"80px"} onClick={nagivateFunc} className='back-btn'/>
+            <img src="https://img.uxwing.com/wp-content/themes/uxwing/download/computers-mobile-hardware/back-button-icon.png" alt="" srcset="" width={"80px"} onClick={nagivateFunc} className='back-btn' />
             <h1>{continent}</h1>
             <div className='main-container'>
-                {countries?.map((item, id) => <CountryRender item={item} key={id} continent={continent} continentId={continentId}/>)}
+                {countries?.map((item, id) => {
+                    return (
+                        <Link to={`/${continent}/${continentId}/${item.name}/${item.id}`}>
+                            <RenderCard item={item} />
+                        </Link>
+                    )
+                }
+
+                )}
 
             </div>
         </div>
