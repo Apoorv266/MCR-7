@@ -1,0 +1,19 @@
+.main-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.card-img{
+    border-radius: 5px;
+}
+
+.card-main{
+    position: relative;
+}
+
+.pin-text{
+    position: absolute;
+    bottom: 8px;
+    left: 50px;
+    color: white;
+}
