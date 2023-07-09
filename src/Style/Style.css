@@ -17,3 +17,28 @@
     left: 50px;
     color: white;
 }
+
+
+.details-main{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.details{
+    width: 400px;
+}
+
+.details a{
+    color: black;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.details a:hover{
+    color: green;
+}
+
+.back-btn{
+    margin-top: 20px;
+}
