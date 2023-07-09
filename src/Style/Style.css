@@ -27,6 +27,7 @@
 
 .details{
     width: 400px;
+    text-align: left;
 }
 
 .details a{
@@ -41,4 +42,5 @@
 
 .back-btn{
     margin-top: 20px;
+    cursor: pointer;
 }
